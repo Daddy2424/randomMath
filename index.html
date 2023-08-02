@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="randomMath.css"></link>
+  <title>Random Math game</title>
+</head>
+<body>
+  <div class="audiopause">
+    <i class="fa-solid fa-volume-high" title="pause music" id="pausebtn" onclick="pauseaudio()"></i>
+  </div>
+
+  <div class="audioplay">
+    <i class="fa-solid fa-volume-xmark"title="play music" id="playbtn" onclick="playaudio()"></i>
+  </div>
+
+  <div class="endgamewin" id="endgamewin">
+    <div id="over" class="over">
+      <h1 class="congrats">Congratulations !!</h1>
+      <h2 class="win">You WON</h2>
+    </div>
+    <div class="restartgame" id="restartgame" >
+      <button onclick="restartGAme()" class="btn4">Restart Game</button>
+    </div>
+  </div>
+  <div class="endgamelose" id="endgamelose">
+    <div class="overlose" id="overlose">
+      <h1 class="lose">You LOSE!!</h1>
+      <h4 class="losequote">Its okay Try again</h4>
+    </div>
+    <div class="restartgame" id="restartgame" >
+        <button onclick="restartGAme()" class="btn5">Restart Game</button>
+    </div>
+  </div>
+
+  <div class="containerall" id="containerall">
+    <div class="info" id="info">
+      <h2 class="infoHeading">Welcome to Random Math game!</h2>
+      <h4 class="infotitle">
+        info :
+      </h4>
+      <h4 class="instructions">
+        => Choose your difficulty.(Expert option is not available &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;right now) <br>
+        => Press START to start the game.<br>
+        => A question box of math will appear.<br>
+        => Enter your answer and click submit.<br>
+        => For each right answer one score will be added.<br>
+        => you will WIN the game once you complete 10
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Questions.<br>
+        => Giving 3 wrong answers will END the game<br>
+        => Press END to end game.
+      </h4>
+      <h4 class="greetings">
+        Happy playing!
+      </h4>
+    </div>
+
+    <div class="startbutton">
+      <button class="btn1" onclick="start()" id="nextbutton">Start</button>
+
+      <div class="dropdown">
+        <div class="input">
+          <input class="selected" placeholder="Choose here" readonly>
+        </div>
+        <div class="options">
+          <p class="Easy" onclick="show('Easy')" aria-valuetext="Easy">Easy</p>
+          <p class="intermidiate" onclick="show('intermidiate')"
+          aria-valuetext="intermidiate">intermidiate</p>
+          <p class="Expert" aria-valuetext="Expert">Expert</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container" id="container">
+      <div class="display">
+        <img id="rooticon" class="rooticon" src="assets/root.png">
+        <div id="display"> 
+        </div>
+        <input type="text" id="input-box" class="input-box" value="">
+      </div>
+      <div class="btn">
+        
+        <button class="btn2" onclick="start()" id="submitbutton">Submit</button>
+        <button class="btn3" onclick="refresh()">End</button>
+      </div>
+      <div class="score">
+        <div id="score">Score</div>
+      </div>
+    </div>
+    <div class="chance" id="chance">
+      <p id="chance"></p>
+    </div>
+  </div>
+  <div class="feedback">
+    <a href="mailto:deepakpoly1980@gmail.com" >Send Feedback</a>
+  </div>
+  <audio id="myaudio" src="songs/puzzle.mp3"></audio>
+  <script src="randomMath.js"></script>
+</body>
+</html>
