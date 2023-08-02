@@ -32,6 +32,10 @@
 .greetings{
   margin-top: 10px;
   margin-left:175px;
+  margin-right: 175px;
+  display:flex;
+  justify-content: center;
+  white-space: nowrap;
 }
 
 .container{
@@ -292,6 +296,7 @@ img{
   border-radius: 3px;
   cursor: default;
   box-shadow: 5px 8px 10px;
+  left: 100px;
 }
 
 .dropdown .options{
