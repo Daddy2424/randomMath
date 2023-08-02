@@ -6,7 +6,7 @@ function  refresh(){
 
 let sqrtRoot = document.getElementById('rooticon');
 
-let score = 9;
+let score = 0;
 let defeat = 0;
 let chance = 4;
 
